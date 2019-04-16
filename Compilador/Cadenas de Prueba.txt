@@ -1,0 +1,39 @@
+•	Gestion de declaraciones y reglas de ambito	(ya)
+•	Comprobaciones de unicidad			(ya)
+•	Comprobaciones de enlace			()
+•	Comprobaciones de inferencia de tipo		(ya)
+
+
+Reconoce:
+#publicus genus joseff {Principalem(){}}//Programa vacío
+#publicus genus Mark {Principalem(){*TOT id; id=20; dum (id == id ) facite {}}} //declaracion, asignacion y bucle mientras-hacer
+#publicus genus Zuckerberg {Principalem(){*TOT id; dum (id == id ) facite {}}} //declaraciony bucle mientras-hacer
+#publicus genus Pipo {Principalem(){*TOT id; dum (id == id ) facite {si (id > id ){}autem{}}}}
+#publicus genus Gonzales {Principalem(){*TOT a=27;}} //
+#publicus genus Pucho {Principalem(){*TOT a; a=2+3*5;}}//
+#publicus genus carro {Principalem(){*TOT id;per (id) facio  { default: {*carro a = 1;} break;} }} //
+#publicus genus Atahualpa {Principalem(){}}publicus genus adidas{*adidas m,n,p,sadasd;}//
+#publicus genus MancoCapac {Principalem(){}}publicus genus adidas{*adidas m,n,p,sadasd;}publicus genus charmander{*MancoCapac b; *adidas zz;}//
+#publicus genus joseff {Principalem(){}}publicus genus adidas{*adidas m,n,p,sadasd;munus dd TOT( *TOT a){*TOT mm;reditus mm;}}publicus genus charmander{*joseff b; *adidas zz;}//
+#publicus genus joseff {Principalem(){}}publicus genus adidas{*TOT a;munus dd TOT( *TOT a){*TOT mm;reditus mm;}}publicus genus charmander{*joseff b; *adidas zz;}//
+#publicus genus  {Principalem(){}}publicus genus adidas{*TOT a;munus dd TOT( *TOT a){*TOT mm;reditus mm;}munus ll TOT( *TOT a){*TOT mm;reditus mm;}munus xx TOT( *TOT a){*TOT mm;reditus mm;}}publicus genus charmander{*joseff b; *adidas zz;}//
+#publicus genus joseff {Principalem(){*VOLI a; a=2.12+3.42*5.1;}}//
+#publicus genus  puma {Principalem(){}}publicus genus adidas{*adidas m,n,p,sadasd;}publicus genus charmander{*joseff b; *adidas zz;}//
+#publicus genus Pucho {Principalem(){*REALI a; a =2+3*5/2;}}//
+
+#publicus genus joseff {Principalem(){}}publicus genus auto{ munus a vacuum (){*TOT a=7;}}publicus genus autos{ munus b vacuum(){*TOT a=5,b; b=a+2;} }
+
+
+Gestion de declaraciones y reglas de ambito
+-Gestion de declaraciones:
+	1. #publicus genus Gonzales {Principalem(){*TOT a=27;}}
+	2. #publicus genus Gonzales {Principalem(){*REALI a=27.56;}}
+	3. #publicus genus Pariona {Principalem(){*REALI a=27.56;}} publicus genus Huapaya{*Pariona izi;}
+
+
+Unicidad de funciones
+Incorrectas:
+#publicus genus guerrero {Principalem(){} munus atacar vacuum( *TOT atk){} munus defender vacuum( *TOT def){} munus atacar vacuum( *REALI atk2){}}
+
+Correcta
+#publicus genus guerrero {Principalem(){} munus atacar vacuum( *TOT atk){} munus defender vacuum( *TOT def){}}

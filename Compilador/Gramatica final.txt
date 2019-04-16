@@ -1,0 +1,34 @@
+P = {
+<S> -> # publicus genus id {Principalem(){<instrucciones>} <funciones>} <clases>	
+<clases> -><clase><clases>/ &
+<clase> -> publicus genus id{<atributos><funciones>} / privatus genus id{<atributos><funciones>}
+<atributos> -> <declarar>;<atributos>/&
+<funciones> -> <función><funciones>/ &
+<función> -> munus id <A>
+<A> -> <tipo_dato> ( <declarar>){<instrucciones> reditus id;}/vacuum ( <declarar>){<instrucciones>}    
+<instrucciones> -> <instruccion><instrucciones>/ &
+<instrucción> -> <si_sino >/ <mientras_hacer> /<según_hacer> / <declarar>;/<funcion>/id <asignar>;
+<declarar> -> *<M> id <asignar><mas> 
+<M> -> <tipo_dato> / id
+<mas> -> , id <asignar><mas>/ &
+<asignar> -> = <valor> / &
+<valor> -> <E> / <funcion> 
+< mientras_hacer > -> dum (id operador_logico id <condicion>) facite {<instrucciones>}             
+< si_sino > -> si (id operador_logico id <condicion>){<instrucciones>} <C>
+<C> -> autem {<instrucciones>} / &
+<segun_hacer>-> per (id) facio  {< lista_CASE> default: {<instrucciones>} break;} 
+<lista_CASE> -> <CASE><LISTA_CASE>/ &
+<CASE> -> apud <D>: <instrucciones> break ;
+<D> -> Letra/Digito
+<condicion> -> <condicion_AND>/<condicion_OR > / &
+<condicion_AND> -> quod id operador_logico id <condicion> 
+<condicion_OR >-> uel id operador_logico id <condicion > 
+<E> -> <Z><V> / ( <E><H><V>
+<Z> -> id / N.Entero / N.Real 
+<V> ->  <operador_aritmetico> <E> / &
+<operador_aritmetico> -> + / - / ^ / * / /
+<operador_logico> <=/ >= /!=/ ==
+<H> -> )
+<tipo_dato> -> TOT/BOOL/VOLI /REALI/CAR/BIN/OCT/HEX/TORQ
+
+}
